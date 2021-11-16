@@ -1,0 +1,17 @@
+mixin footer(data)
+    - data = data || {}
+    -
+        var copyText = 'copy'
+        //- var footerLinks = [
+        //-     {url: '#', text: 'Wedstrijdreglement', isActive: true, external: true},
+        //-     {url: '#', text: 'Gebruiksvoorwaarden', isActive: false, external: true},
+        //-     {url: '#', text: 'Privacybeleid', name: false, external: true},
+        //-     {url: '#', text: 'Cookie beleid', name: false, external: true},
+        //- ]
+
+
+    .footer
+        .footer__container
+            .footer__copy!=copyText
+            .footer__nav
+               

@@ -1,0 +1,21 @@
+{
+  "name": "my-project",
+  "source": "src/pug/pages/index.pug",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel -p 3000 --open",
+    "clean": "rimraf dist/*",
+    "build:parcel": "parcel build --public-url ./",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "parcel-plugin-imagemin": "^4.0.2",
+    "parcel-plugin-svg-sprite": "^1.4.1"
+  }
+}

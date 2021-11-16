@@ -1,0 +1,23 @@
+mixin header(data)
+    - data = data || {}
+    //- -
+    //-   var languages = _lara ? _languages : [
+    //-     {lang: 'nl', url: '#', isActive: false},
+    //-     {lang: 'fr', url: '#', isActive: false},
+    //-     {lang: 'en', url: '#', isActive: true}
+    //-   ]
+    .header
+        .header__container
+            a.logo(href="/")
+                //- +icon('logo')
+            .header__trigger
+                | Test
+                svg(style="fill:red;stroke:red;")
+                    use(href="../../icons/facebook.svg")
+            .header__lang
+                ul
+                    li 1f
+                    li 2f
+                    //- each data in languages
+                    //-     li
+                    //-         a(href=data.url class=data.isActive && 'is-active') #{data.lang}

@@ -1,0 +1,60 @@
+include ../utils/mixins
+include ../utils/includes
+- var pathPrefix = '/';
+- var description = 'Description';
+- var pageClass = '';
+
+- var pageName = '';
+-
+    var lang = _lang || 'en'
+
+    //- var _trans = _lara ?  {} : require("../../../../resources/lang/en.json")
+
+    //- var t = function ($key) {
+    //-     return _lara
+    //-         ? __($key)
+    //-         : _trans[$lang + '.' + $key]
+    //- };
+
+    //- var title = t('home.title')
+
+
+    var headerVisible = true;
+    var footerVisible = true;
+
+block variables
+
+doctype html
+html(lang= $lang, data-locale= $lang)
+    head
+        meta(charset='utf-8')
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(content="telephone=no" name="format-detection")
+        meta(name="HandheldFriendly" content="true")
+        //- +meta()
+        //- +favicon()
+
+        link(rel='stylesheet' href='../../scss/main.scss')
+
+        block head
+
+    body.body
+        main.layout(class=pageClass)
+            .layout__header
+                if headerVisible
+                    +header()
+                block header
+            main.layout__main
+                block content
+            .layout__footer
+                if footerVisible
+                    +footer()
+                block footer
+
+        block modals
+
+        +lazyImgLoader()
+
+        script(type='module' src='../../js/index.js')
+        block script
