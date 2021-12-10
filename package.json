@@ -12,6 +12,8 @@
     "@parcel/transformer-pug": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
     "parcel": "^2.0.1",
+    "parcel-packager-svg-sprite": "^2.0.0",
+    "parcel-transformer-svg-sprite": "^2.0.0",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
